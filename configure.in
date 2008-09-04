@@ -1,0 +1,43 @@
+dnl $Id$
+dnl Process this file with Autoconf to create configure
+
+dnl -----------------------------------------------
+dnl Initialization macros.
+dnl -----------------------------------------------
+
+AC_REVISION([0.0.0])
+AC_INIT(tetris.c)
+AC_CANONICAL_SYSTEM
+
+dnl -----------------------------------------------
+dnl Package name and version number (user defined).
+dnl -----------------------------------------------
+
+PACKAGE=tetris
+VERSION=0.73
+AM_INIT_AUTOMAKE($PACKAGE, $VERSION)
+
+dnl -----------------------------------------------
+dnl Checks for programs.
+dnl -----------------------------------------------
+
+AC_PROG_CC
+AM_SANITY_CHECK
+
+dnl -----------------------------------------------
+dnl Checks for libraries.
+dnl -----------------------------------------------
+
+AC_CHECK_LIB(alleg, alleg_init)
+
+dnl -----------------------------------------------
+dnl Checks for header files.
+dnl -----------------------------------------------
+
+AC_HEADER_STDC
+
+dnl -----------------------------------------------
+dnl Generates Makefiles.
+dnl -----------------------------------------------
+
+AC_OUTPUT(Makefile)
